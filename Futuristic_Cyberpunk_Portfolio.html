@@ -1,0 +1,1026 @@
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head><base href="https://d16ilfvy4mv02r.cloudfront.net/workspaces/K3X97YtqFlVffCfTtpx4MeCxaVjPtvzc/0bfde6c4-ee47-4457-8af0-4957130a0355/files/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <title>Naman Gupta | Futuristic Portfolio</title>
+
+  <style>
+    :root {
+      --cyan: #00f5ff;
+      --blue: #2563eb;
+      --purple: #7c4dff;
+      --magenta: #ff2bd6;
+      --dark: #050816;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #050816;
+      color: white;
+      overflow-x: hidden;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    section {
+      position: relative;
+      scroll-margin-top: 110px;
+      z-index: 5;
+    }
+
+    /* ================= PREMIUM BACKGROUND SYSTEM ================= */
+
+    .cinematic-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -20;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0, 245, 255, 0.14), transparent 28%),
+        radial-gradient(circle at 80% 15%, rgba(124, 77, 255, 0.16), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(255, 43, 214, 0.10), transparent 35%),
+        linear-gradient(135deg, #050816 0%, #080b1f 35%, #10051f 70%, #030712 100%);
+    }
+
+    .mesh-gradient {
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 15% 25%, rgba(0, 245, 255, 0.22), transparent 24%),
+        radial-gradient(circle at 70% 20%, rgba(124, 77, 255, 0.25), transparent 25%),
+        radial-gradient(circle at 85% 75%, rgba(255, 43, 214, 0.16), transparent 24%),
+        radial-gradient(circle at 25% 85%, rgba(37, 99, 235, 0.18), transparent 25%);
+      filter: blur(70px);
+      opacity: 0.85;
+      animation: meshMove 22s ease-in-out infinite alternate;
+    }
+
+    @keyframes meshMove {
+      0% {
+        transform: translate3d(-2%, -2%, 0) scale(1);
+      }
+
+      50% {
+        transform: translate3d(3%, 2%, 0) scale(1.08) rotate(4deg);
+      }
+
+      100% {
+        transform: translate3d(-1%, 4%, 0) scale(1.02) rotate(-3deg);
+      }
+    }
+
+    .aurora {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(115deg, transparent 10%, rgba(0, 245, 255, 0.10), transparent 35%),
+        linear-gradient(70deg, transparent 25%, rgba(124, 77, 255, 0.12), transparent 55%),
+        linear-gradient(130deg, transparent 40%, rgba(255, 43, 214, 0.08), transparent 75%);
+      filter: blur(40px);
+      opacity: 0.8;
+      animation: auroraFlow 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes auroraFlow {
+      from {
+        transform: translateX(-5%) translateY(2%) skewX(-6deg);
+      }
+
+      to {
+        transform: translateX(6%) translateY(-3%) skewX(6deg);
+      }
+    }
+
+    .tech-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 245, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 245, 255, 0.055) 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: radial-gradient(circle at center, black 20%, transparent 75%);
+      opacity: 0.45;
+      animation: gridMove 28s linear infinite;
+    }
+
+    @keyframes gridMove {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(70px);
+      }
+    }
+
+    .matrix-layer {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(180deg, rgba(0, 245, 255, 0.07), transparent 18%),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0 120px,
+          rgba(0, 245, 255, 0.035) 121px,
+          transparent 122px
+        );
+      opacity: 0.25;
+      animation: matrixSlide 20s linear infinite;
+    }
+
+    @keyframes matrixSlide {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-120px);
+      }
+    }
+
+    .noise {
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.7) 0 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.5) 0 1px, transparent 1px),
+        radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.4) 0 1px, transparent 1px);
+      background-size: 120px 120px, 160px 160px, 220px 220px;
+      animation: noiseMove 9s steps(4) infinite;
+    }
+
+    @keyframes noiseMove {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(-2%, 1%);
+      }
+
+      50% {
+        transform: translate(1%, -2%);
+      }
+
+      75% {
+        transform: translate(2%, 1%);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    .fog {
+      position: absolute;
+      inset: auto -20% -20% -20%;
+      height: 45%;
+      background:
+        radial-gradient(ellipse at center, rgba(0, 245, 255, 0.08), transparent 60%),
+        radial-gradient(ellipse at 70% 40%, rgba(124, 77, 255, 0.12), transparent 55%);
+      filter: blur(70px);
+      animation: fogFloat 17s ease-in-out infinite alternate;
+    }
+
+    @keyframes fogFloat {
+      from {
+        transform: translateX(-4%) scale(1);
+      }
+
+      to {
+        transform: translateX(5%) scale(1.12);
+      }
+    }
+
+    .orb {
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      filter: blur(20px);
+      opacity: 0.5;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), rgba(0, 245, 255, 0.12), transparent 65%);
+      box-shadow: 0 0 80px rgba(0, 245, 255, 0.28);
+      animation: floatOrb 18s ease-in-out infinite;
+    }
+
+    .orb-1 {
+      top: 12%;
+      left: -120px;
+      background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.38), rgba(0, 245, 255, 0.20), transparent 67%);
+    }
+
+    .orb-2 {
+      top: 35%;
+      right: -140px;
+      animation-delay: -5s;
+      background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.25), rgba(124, 77, 255, 0.24), transparent 67%);
+      box-shadow: 0 0 90px rgba(124, 77, 255, 0.35);
+    }
+
+    .orb-3 {
+      bottom: 8%;
+      left: 30%;
+      width: 280px;
+      height: 280px;
+      animation-delay: -10s;
+      background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.22), rgba(255, 43, 214, 0.20), transparent 68%);
+      box-shadow: 0 0 80px rgba(255, 43, 214, 0.25);
+    }
+
+    @keyframes floatOrb {
+      0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate3d(55px, -45px, 0) scale(1.08);
+      }
+    }
+
+    .light-streak {
+      position: absolute;
+      width: 2px;
+      height: 260px;
+      background: linear-gradient(to bottom, transparent, rgba(0, 245, 255, 0.7), transparent);
+      filter: blur(1px);
+      transform: rotate(45deg);
+      opacity: 0.55;
+      animation: streakMove 9s linear infinite;
+    }
+
+    .streak-1 {
+      top: -20%;
+      left: 15%;
+    }
+
+    .streak-2 {
+      top: -40%;
+      left: 65%;
+      animation-delay: -3s;
+      background: linear-gradient(to bottom, transparent, rgba(255, 43, 214, 0.55), transparent);
+    }
+
+    .streak-3 {
+      top: -30%;
+      left: 85%;
+      animation-delay: -6s;
+      background: linear-gradient(to bottom, transparent, rgba(124, 77, 255, 0.65), transparent);
+    }
+
+    @keyframes streakMove {
+      from {
+        transform: translate3d(0, -40vh, 0) rotate(45deg);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0.65;
+      }
+
+      to {
+        transform: translate3d(-55vw, 130vh, 0) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .mouse-glow {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      pointer-events: none;
+      z-index: -5;
+      background: radial-gradient(circle, rgba(0, 245, 255, 0.14), rgba(124, 77, 255, 0.08), transparent 70%);
+      filter: blur(30px);
+      transform: translate(-50%, -50%);
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+
+    .particles {
+      position: fixed;
+      inset: 0;
+      z-index: -10;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(180, 255, 255, 0.7);
+      box-shadow: 0 0 12px rgba(0, 245, 255, 0.75);
+      animation: particleFloat linear infinite;
+    }
+
+    @keyframes particleFloat {
+      from {
+        transform: translateY(105vh);
+        opacity: 0;
+      }
+
+      12% {
+        opacity: 0.8;
+      }
+
+      85% {
+        opacity: 0.55;
+      }
+
+      to {
+        transform: translateY(-15vh);
+        opacity: 0;
+      }
+    }
+
+    /* ================= UI EFFECTS ================= */
+
+    .gradient-text {
+      background: linear-gradient(90deg, #00f5ff, #8b5cf6, #ff2bd6, #00f5ff);
+      background-size: 250%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGradient 7s ease-in-out infinite;
+    }
+
+    @keyframes textGradient {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .glass-nav {
+      background: linear-gradient(135deg, rgba(8, 13, 32, 0.74), rgba(12, 7, 32, 0.58));
+      backdrop-filter: blur(22px);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 0 40px rgba(0, 245, 255, 0.09);
+    }
+
+    .premium-card {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(13, 18, 43, 0.88), rgba(8, 10, 28, 0.74));
+      backdrop-filter: blur(22px);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 20px 70px rgba(0, 0, 0, 0.35);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .premium-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, 0.13), transparent 45%);
+      transform: translateX(-120%);
+      transition: transform 0.9s ease;
+    }
+
+    .premium-card::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.45), rgba(124, 77, 255, 0.15), rgba(255, 43, 214, 0.28));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .premium-card:hover {
+      transform: translateY(-10px) scale(1.015);
+      border-color: rgba(0, 245, 255, 0.45);
+      box-shadow:
+        0 0 40px rgba(0, 245, 255, 0.22),
+        0 28px 90px rgba(0, 0, 0, 0.45);
+    }
+
+    .premium-card:hover::before {
+      transform: translateX(120%);
+    }
+
+    .neon-button {
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 0 22px rgba(0, 245, 255, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+
+    .neon-button::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: translateX(-120%);
+      transition: transform 0.7s ease;
+    }
+
+    .neon-button:hover::after {
+      transform: translateX(120%);
+    }
+
+    .section-shell {
+      border-top: 1px solid rgba(0, 245, 255, 0.08);
+      background:
+        linear-gradient(180deg, transparent 0%, rgba(8, 11, 29, 0.18) 35%, transparent 100%);
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(850px, 95vw);
+      height: min(850px, 95vw);
+      border-radius: 999px;
+      transform: translate(-50%, -50%);
+      background:
+        radial-gradient(circle, rgba(0, 245, 255, 0.19), transparent 45%),
+        radial-gradient(circle, rgba(124, 77, 255, 0.15), transparent 62%);
+      filter: blur(30px);
+      z-index: -1;
+      animation: pulseGlow 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      from {
+        opacity: 0.65;
+        transform: translate(-50%, -50%) scale(0.94);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.04);
+      }
+    }
+
+    .hud-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(580px, 82vw);
+      height: min(580px, 82vw);
+      border-radius: 999px;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(0, 245, 255, 0.12);
+      z-index: -1;
+      animation: rotateRing 32s linear infinite;
+    }
+
+    .hud-ring::before,
+    .hud-ring::after {
+      content: "";
+      position: absolute;
+      inset: 30px;
+      border-radius: inherit;
+      border: 1px dashed rgba(124, 77, 255, 0.22);
+    }
+
+    .hud-ring::after {
+      inset: 80px;
+      border-color: rgba(255, 43, 214, 0.18);
+      animation: rotateRing 20s linear infinite reverse;
+    }
+
+    @keyframes rotateRing {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .floating {
+      animation: softFloat 6s ease-in-out infinite;
+    }
+
+    @keyframes softFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-14px);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .orb {
+        width: 230px;
+        height: 230px;
+      }
+
+      .mouse-glow {
+        display: none;
+      }
+
+      .tech-grid {
+        background-size: 48px 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= BACKGROUND LAYERS ================= -->
+
+  <div class="cinematic-bg">
+    <div class="mesh-gradient"></div>
+    <div class="aurora"></div>
+    <div class="tech-grid"></div>
+    <div class="matrix-layer"></div>
+    <div class="orb orb-1 parallax" data-speed="0.04"></div>
+    <div class="orb orb-2 parallax" data-speed="-0.03"></div>
+    <div class="orb orb-3 parallax" data-speed="0.025"></div>
+    <div class="light-streak streak-1"></div>
+    <div class="light-streak streak-2"></div>
+    <div class="light-streak streak-3"></div>
+    <div class="fog"></div>
+    <div class="noise"></div>
+  </div>
+
+  <div class="mouse-glow" id="mouse-glow"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav
+    class="glass-nav sticky top-3 z-50 mx-3 mt-3 flex h-16 items-center justify-between rounded-full border border-cyan-400/20 px-5 md:mx-6 md:px-8"
+  >
+    <a href="#home" class="text-2xl font-bold">
+      Naman <span class="gradient-text">G.</span>
+    </a>
+
+    <div class="hidden gap-10 text-gray-300 md:flex">
+      <a href="#home" class="duration-300 hover:text-cyan-400">Home</a>
+      <a href="#about" class="duration-300 hover:text-cyan-400">About</a>
+      <a href="#skills" class="duration-300 hover:text-cyan-400">Skills</a>
+      <a href="#projects" class="duration-300 hover:text-cyan-400">Projects</a>
+      <a href="#contact" class="duration-300 hover:text-cyan-400">Contact</a>
+    </div>
+
+    <a
+      href="#contact"
+      class="hidden rounded-full border border-cyan-400/60 px-5 py-2 font-medium text-cyan-300 duration-300 hover:bg-cyan-400 hover:text-black md:block"
+    >
+      Hire Me
+    </a>
+
+    <button
+      id="menu-btn"
+      class="text-2xl text-white md:hidden"
+      aria-label="Open menu"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div
+      id="mobile-menu"
+      class="absolute left-0 top-20 hidden w-full flex-col items-center gap-5 rounded-3xl border border-cyan-400/20 bg-[#050816]/95 py-6 text-gray-300 backdrop-blur-xl md:hidden"
+    >
+      <a href="#home" class="mobile-link hover:text-cyan-400">Home</a>
+      <a href="#about" class="mobile-link hover:text-cyan-400">About</a>
+      <a href="#skills" class="mobile-link hover:text-cyan-400">Skills</a>
+      <a href="#projects" class="mobile-link hover:text-cyan-400">Projects</a>
+      <a href="#contact" class="mobile-link hover:text-cyan-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+
+  <section
+    id="home"
+    class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center"
+  >
+    <div class="hero-glow"></div>
+    <div class="hud-ring"></div>
+
+    <p
+      class="floating mb-6 rounded-full border border-cyan-400/50 bg-white/5 px-5 py-2 text-xs uppercase tracking-[0.3em] text-cyan-300 backdrop-blur-xl md:text-sm"
+    >
+      Available For Frontend Developer Roles
+    </p>
+
+    <h1 class="max-w-6xl text-4xl font-black leading-tight sm:text-6xl md:text-8xl">
+      Crafting
+      <span class="gradient-text">Futuristic</span>
+      Web Experiences
+    </h1>
+
+    <p class="mt-8 max-w-3xl text-base leading-8 text-gray-300 md:text-2xl md:leading-10">
+      I'm
+      <span class="font-bold text-cyan-300">Naman Gupta</span>,
+      a passionate Frontend Developer from
+      <span class="text-white">Indore, Madhya Pradesh, India</span>,
+      building cinematic, responsive and high-performance web interfaces.
+    </p>
+
+    <div class="mt-10 flex flex-col gap-5 sm:flex-row">
+      <a
+        href="#projects"
+        class="neon-button rounded-xl bg-cyan-400 px-8 py-3 font-bold text-black duration-300 hover:scale-105 hover:bg-cyan-300"
+      >
+        View My Work
+      </a>
+
+      <a
+        href="#contact"
+        class="rounded-xl border border-cyan-400/70 bg-white/5 px-8 py-3 font-bold text-cyan-300 backdrop-blur-xl duration-300 hover:bg-cyan-400 hover:text-black"
+      >
+        Contact Me
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+
+  <section id="about" class="section-shell px-6 py-24 md:px-12">
+    <div class="reveal">
+      <h1 class="text-5xl font-bold italic md:text-7xl">
+        About <span class="gradient-text">Me</span>
+      </h1>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+
+      <div class="reveal max-w-2xl">
+        <p class="text-lg leading-9 text-gray-300">
+          Hi, I'm
+          <span class="font-bold text-cyan-300">Naman Gupta</span>,
+          a Computer Science student and passionate Frontend Developer.
+          I love creating attractive, modern and responsive websites with
+          clean UI/UX and smooth user experience.
+          <br /><br />
+          I work with HTML, CSS, JavaScript, Tailwind CSS, Bootstrap
+          and React to build scalable and high-performance interfaces.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-6">
+          <div class="premium-card rounded-2xl border border-cyan-400/20 p-6">
+            <h2 class="text-4xl font-bold text-cyan-300">1+</h2>
+            <p class="text-gray-400">Years Learning</p>
+          </div>
+
+          <div class="premium-card rounded-2xl border border-cyan-400/20 p-6">
+            <h2 class="text-4xl font-bold text-cyan-300">10+</h2>
+            <p class="text-gray-400">Projects Built</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal premium-card w-full max-w-xl rounded-3xl border border-cyan-400/20 p-8">
+        <h2 class="mb-5 text-3xl font-bold">Education</h2>
+
+        <p class="text-xl font-semibold">Computer Science</p>
+
+        <p class="text-gray-400">
+          Sri Aurobindo Institute of Technology, Indore
+        </p>
+
+        <p class="mt-2 text-cyan-300">2026 – Present</p>
+
+        <hr class="my-6 border-cyan-400/15" />
+
+        <h2 class="mb-5 text-2xl font-bold">Certifications</h2>
+
+        <ul class="space-y-3 text-gray-400">
+          <li>
+            Meta Front-End Developer —
+            <span class="text-white">Coursera</span>
+          </li>
+
+          <li>
+            Web Design & Development —
+            <span class="text-white">Roohi eSkills Learning Hub</span>
+          </li>
+
+          <li>
+            Canva Fellowship Program —
+            <span class="text-white">Fluxxion</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS SECTION ================= -->
+
+  <section id="skills" class="section-shell px-6 py-24 md:px-12">
+    <div class="reveal">
+      <h1 class="text-5xl font-bold italic md:text-7xl">
+        Tech <span class="gradient-text">Stack</span>
+      </h1>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-8">
+        <i class="fa-brands fa-html5 text-5xl text-cyan-300"></i>
+        <h2 class="mt-5 text-2xl font-bold">HTML5</h2>
+        <p class="mt-3 text-gray-400">Creating clean semantic layouts for modern websites.</p>
+      </div>
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-8">
+        <i class="fa-brands fa-css3-alt text-5xl text-cyan-300"></i>
+        <h2 class="mt-5 text-2xl font-bold">CSS3</h2>
+        <p class="mt-3 text-gray-400">Designing responsive interfaces with animations.</p>
+      </div>
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-8">
+        <i class="fa-brands fa-js text-5xl text-cyan-300"></i>
+        <h2 class="mt-5 text-2xl font-bold">JavaScript</h2>
+        <p class="mt-3 text-gray-400">Adding functionality and dynamic interactions.</p>
+      </div>
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-8">
+        <i class="fa-solid fa-wind text-5xl text-cyan-300"></i>
+        <h2 class="mt-5 text-2xl font-bold">Tailwind CSS</h2>
+        <p class="mt-3 text-gray-400">Utility-first framework for fast modern UI design.</p>
+      </div>
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-8">
+        <i class="fa-brands fa-bootstrap text-5xl text-cyan-300"></i>
+        <h2 class="mt-5 text-2xl font-bold">Bootstrap</h2>
+        <p class="mt-3 text-gray-400">Building responsive layouts and components quickly.</p>
+      </div>
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-8">
+        <i class="fa-brands fa-react text-5xl text-cyan-300"></i>
+        <h2 class="mt-5 text-2xl font-bold">React</h2>
+        <p class="mt-3 text-gray-400">Creating reusable UI components and SPA experiences.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+
+  <section id="projects" class="section-shell px-6 py-24 md:px-12">
+    <div class="reveal">
+      <h1 class="text-5xl font-bold italic md:text-7xl">
+        My <span class="gradient-text">Projects</span>
+      </h1>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-6">
+        <img
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200"
+          class="h-52 w-full rounded-2xl object-cover opacity-90"
+          alt="Portfolio website project preview"
+        />
+
+        <h2 class="mt-5 text-2xl font-bold">Portfolio Website</h2>
+
+        <p class="mt-3 text-gray-400">
+          Personal modern portfolio built using Tailwind CSS and JavaScript.
+        </p>
+
+        <p class="mt-4 text-cyan-300">HTML / Tailwind / JS</p>
+
+        <a
+          href="#contact"
+          class="mt-5 inline-block rounded-xl bg-cyan-400 px-5 py-2 font-semibold text-black duration-300 hover:bg-cyan-300"
+        >
+          Visit
+        </a>
+      </div>
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-6">
+        <img
+          src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200"
+          class="h-52 w-full rounded-2xl object-cover opacity-90"
+          alt="E-commerce UI project preview"
+        />
+
+        <h2 class="mt-5 text-2xl font-bold">E-Commerce UI</h2>
+
+        <p class="mt-3 text-gray-400">
+          Responsive shopping website with modern neon aesthetics.
+        </p>
+
+        <p class="mt-4 text-cyan-300">React / Tailwind</p>
+
+        <a
+          href="#contact"
+          class="mt-5 inline-block rounded-xl bg-cyan-400 px-5 py-2 font-semibold text-black duration-300 hover:bg-cyan-300"
+        >
+          Visit
+        </a>
+      </div>
+
+      <div class="reveal premium-card rounded-3xl border border-cyan-400/20 p-6">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200"
+          class="h-52 w-full rounded-2xl object-cover opacity-90"
+          alt="Landing page project preview"
+        />
+
+        <h2 class="mt-5 text-2xl font-bold">Landing Page</h2>
+
+        <p class="mt-3 text-gray-400">
+          High-converting landing page with responsive layout.
+        </p>
+
+        <p class="mt-4 text-cyan-300">HTML / CSS</p>
+
+        <a
+          href="#contact"
+          class="mt-5 inline-block rounded-xl bg-cyan-400 px-5 py-2 font-semibold text-black duration-300 hover:bg-cyan-300"
+        >
+          Visit
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+
+  <section id="contact" class="section-shell px-6 py-24 md:px-12">
+    <div class="reveal">
+      <h1 class="text-5xl font-bold italic md:text-7xl">
+        Contact <span class="gradient-text">Me</span>
+      </h1>
+    </div>
+
+    <div class="reveal premium-card mt-14 rounded-3xl border border-cyan-400/20 p-8 md:p-10">
+      <div class="space-y-6 text-lg text-gray-300">
+
+        <p>
+          <span class="font-bold text-cyan-300">Name:</span>
+          Naman Gupta
+        </p>
+
+        <p>
+          <span class="font-bold text-cyan-300">Location:</span>
+          Indore, Madhya Pradesh, India
+        </p>
+
+        <p>
+          <span class="font-bold text-cyan-300">Email:</span>
+          <a
+            href="mailto:naman200811@gmail.com"
+            class="break-all text-white duration-300 hover:text-cyan-300"
+          >
+            naman200811@gmail.com
+          </a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="border-t border-cyan-400/20 py-8 text-center text-gray-500">
+    © 2026 Naman Gupta. All Rights Reserved.
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const allScrollLinks = document.querySelectorAll('a[href^="#"]');
+    const mouseGlow = document.getElementById("mouse-glow");
+    const particlesContainer = document.getElementById("particles");
+    const parallaxItems = document.querySelectorAll(".parallax");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
+
+      const icon = menuBtn.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-xmark");
+    });
+
+    allScrollLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const targetId = link.getAttribute("href");
+
+        if (targetId && targetId.startsWith("#") && targetId.length > 1) {
+          e.preventDefault();
+
+          const targetSection = document.querySelector(targetId);
+
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          }
+        }
+
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+
+        const icon = menuBtn.querySelector("i");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+      });
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      mouseGlow.style.left = e.clientX + "px";
+      mouseGlow.style.top = e.clientY + "px";
+
+      const x = (e.clientX - window.innerWidth / 2);
+      const y = (e.clientY - window.innerHeight / 2);
+
+      parallaxItems.forEach((item) => {
+        const speed = Number(item.dataset.speed);
+        item.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+      });
+    });
+
+    for (let i = 0; i < 75; i++) {
+      const particle = document.createElement("span");
+      particle.classList.add("particle");
+
+      const size = Math.random() * 2.4 + 1;
+      particle.style.width = size + "px";
+      particle.style.height = size + "px";
+      particle.style.left = Math.random() * 100 + "%";
+      particle.style.animationDuration = Math.random() * 18 + 10 + "s";
+      particle.style.animationDelay = Math.random() * -25 + "s";
+      particle.style.opacity = Math.random() * 0.65 + 0.15;
+
+      particlesContainer.appendChild(particle);
+    }
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+  </script>
+
+</body>
+
+</html>
